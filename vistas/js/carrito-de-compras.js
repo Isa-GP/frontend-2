@@ -55,8 +55,8 @@ $(document).on("click", "#btnRealizarPedido", function () {
 
     
 
-    // Número de WhatsApp (cambiarlo por el tuyo)
-    var numeroWhatsApp = "3007702633";
+    // Número de WhatsApp 
+    var numeroWhatsApp = "3187440116";
 
     // Crear el enlace de redirección a WhatsApp
     var enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
@@ -184,7 +184,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<p class="subTotal'+index+' subtotales">'+
 									
-									'<strong> <span>No Disnonible</span></strong>'+
+									'<strong> <span>No Disponible</span></strong>'+
 
 								'</p>'+
 
@@ -263,7 +263,7 @@ $(".agregarCarrito").click(function(){
 			if($(seleccionarDetalle[i]).val() == ""){
 
 				swal({
-					  title: "Debe seleccionar Talla y Color",
+					  title: "Debe seleccionar Presentacion",
 					  text: "",
 					  type: "warning",
 					  showCancelButton: false,
