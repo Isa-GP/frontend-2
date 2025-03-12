@@ -245,11 +245,7 @@ LISTAR PRODUCTOS
 								
 								<div class="btn-group pull-right">
 									
-									<button type="button" class="btn btn-default btn-xs deseos" idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-										
-										<i class="fa fa-heart" aria-hidden="true"></i>
-
-									</button>';
+								
 
 									if($value["tipo"] == "virtual" && $value["precio"] != 0){
 
@@ -395,11 +391,7 @@ LISTAR PRODUCTOS
 
 								echo '<div class="btn-group pull-left enlaces">
 							  	
-							  		<button type="button" class="btn btn-default btn-xs deseos"  idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-
-							  			<i class="fa fa-heart" aria-hidden="true"></i>
-
-							  		</button>';
+							  	
 
 							  		if($value["tipo"] == "virtual" && $value["precio"] != 0){
 

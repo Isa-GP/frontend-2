@@ -371,10 +371,12 @@ INFOPRODUCTOS
 
 							}
 
-							/*
-							if($detalles["Color"]!=null){
+							
+							if( isset($detalles["Color"])!=null){
+								
+								if(!empty($detalles["Color"])){
 
-								echo '<div class="col-md-3 col-xs-12">
+									echo '<div class="col-md-3 col-xs-12">
 
 									<select class="form-control seleccionarDetalle" id="seleccionarColor">
 										
@@ -390,15 +392,23 @@ INFOPRODUCTOS
 
 								</div>';
 
+								}
+
+							
+
 							}
+								
 
-							if($detalles["Marca"]!=null){
 
+								
+
+							if( isset($detalles["Marca"])!=null){
+								if(!empty($detalles["Marca"])){
 								echo '<div class="col-md-3 col-xs-12">
 
 									<select class="form-control seleccionarDetalle" id="seleccionarMarca">
 										
-										<option value="">Marca</option>';
+										<option value="">Fragancia</option>';
 
 										for($i = 0; $i <= count($detalles["Marca"]); $i++){
 
@@ -409,8 +419,9 @@ INFOPRODUCTOS
 									echo '</select>
 
 								</div>';
+									}
 
-							}*/
+							}
 
 						}else{
 
@@ -494,8 +505,7 @@ INFOPRODUCTOS
 									<i class="fa fa-clock-o" style="margin-right:5px"></i>
 									Entrega inmediata |
 									<i class="fa fa-shopping-cart" style="margin:0px 5px"></i>
-									'.$infoproducto["ventas"].' ventas |
-									<i class="fa fa-eye" style="margin:0px 5px"></i>
+									
 									Visto por <span class="vistas" tipo="'.$infoproducto["precio"].'">'.$infoproducto["vistas"].' </span> personas
 
 								</span>
@@ -1229,11 +1239,7 @@ ARTÏCULOS RELACIONADOS
 							
 							<div class="btn-group pull-right">
 								
-								<button type="button" class="btn btn-default btn-xs deseos" idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-									
-									<i class="fa fa-heart" aria-hidden="true"></i>
-
-								</button>';
+								';
 
 								if($value["tipo"] == "virtual" && $value["precio"] != 0){
 

@@ -233,11 +233,7 @@ for($i = 0; $i < count($titulosModulos); $i ++){
 								
 								<div class="btn-group pull-right">
 									
-									<button type="button" class="btn btn-default btn-xs deseos" idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-										
-										<i class="fa fa-heart" aria-hidden="true"></i>
-
-									</button>';
+									';
 
 									if($value["tipo"] == "virtual" && $value["precio"] != 0){
 
@@ -368,11 +364,7 @@ for($i = 0; $i < count($titulosModulos); $i ++){
 
 							echo '<div class="btn-group pull-left enlaces">
 						  	
-						  		<button type="button" class="btn btn-default btn-xs deseos"  idProducto="'.$value["id"].'" data-toggle="tooltip" title="Agregar a mi lista de deseos">
-
-						  			<i class="fa fa-heart" aria-hidden="true"></i>
-
-						  		</button>';
+						  		';
 
 						  		if($value["tipo"] == "virtual" && $value["precio"] != 0){
 

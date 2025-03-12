@@ -55,8 +55,8 @@ $(document).on("click", "#btnRealizarPedido", function () {
 
     
 
-    // Número de WhatsApp 
-    var numeroWhatsApp = "3187440116";
+    // Número de WhatsApp (cambiarlo por el tuyo)
+    var numeroWhatsApp = "3007702633";
 
     // Crear el enlace de redirección a WhatsApp
     var enlaceWhatsApp = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${mensaje}`;
@@ -184,7 +184,7 @@ for(var i = 0; i < indice.length; i++){
 
 								'<p class="subTotal'+index+' subtotales">'+
 									
-									'<strong> <span>No Disponible</span></strong>'+
+									'<strong> <span>No Disnonible</span></strong>'+
 
 								'</p>'+
 
@@ -458,52 +458,7 @@ $(document).on("click", ".quitarItemCarrito", function(){
 /*=============================================
 GENERAR SUBTOTAL DESPUES DE CAMBIAR CANTIDAD
 =============================================*/
-$(document).on("change", ".cantidadItem", function(){
 
-	var cantidad = $(this).val();
-	var precio = $(this).attr("precio");
-	var idProducto = $(this).attr("idProducto");
-	var item = $(this).attr("item");
-
-	$(".subTotal"+item).html('<strong>USD $<span>'+(cantidad*precio)+'</span></strong>');
-
-	/*=============================================
-	ACTUALIZAR LA CANTIDAD EN EL LOCALSTORAGE
-	=============================================*/
-
-	var idProducto = $(".cuerpoCarrito button");
-	var imagen = $(".cuerpoCarrito img");
-	var titulo = $(".cuerpoCarrito .tituloCarritoCompra");
-	var precio = $(".cuerpoCarrito .precioCarritoCompra span");
-	var cantidad = $(".cuerpoCarrito .cantidadItem");
-
-	listaCarrito = [];
-
-	for(var i = 0; i < idProducto.length; i++){
-
-			var idProductoArray = $(idProducto[i]).attr("idProducto");
-			var imagenArray = $(imagen[i]).attr("src");
-			var tituloArray = $(titulo[i]).html();
-			var precioArray = $(precio[i]).html();
-			var pesoArray = $(idProducto[i]).attr("peso");
-			var tipoArray = $(cantidad[i]).attr("tipo");
-			var cantidadArray = $(cantidad[i]).val();
-
-			listaCarrito.push({"idProducto":idProductoArray,
-						   "imagen":imagenArray,
-						   "titulo":tituloArray,
-						   "precio":precioArray,
-					       "tipo":tipoArray,
-				           "peso":pesoArray,
-				           "cantidad":cantidadArray});
-
-		}
-
-		localStorage.setItem("listaProductos",JSON.stringify(listaCarrito));
-
-		sumaSubtotales();
-		cestaCarrito(listaCarrito.length);
-})
 
 /*=============================================
 /*=============================================
